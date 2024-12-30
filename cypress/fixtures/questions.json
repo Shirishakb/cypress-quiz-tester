@@ -4,5 +4,10 @@
       "options": ["Language", "Framework", "Library", "Plugin"],
       "correctAnswer": "Language"
     }
+    {
+        "question": "What is React?",
+        "options": ["Language", "Framework", "Library", "Plugin"],
+        "correctAnswer": "Library"
+    }
   ]
   
