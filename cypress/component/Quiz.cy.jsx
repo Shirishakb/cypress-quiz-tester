@@ -3,22 +3,35 @@ import { mount } from 'cypress/react';
 import Quiz from '../../client/src/components/Quiz'; 
 
 describe('Quiz Component', () => {
-    it('renders the Quiz component', () => {
-        mount(<Quiz />);
-        cy.get('[data-cy=quiz-container]').should('exist');
+    beforeEach(() => {
+      cy.intercept({
+          method: 'GET',
+          url: '/api/questions/random'
+        },
+        {
+          fixture: 'questions.json',
+          statusCode: 200
+        }
+        ).as('getRandomQuestion')
+      });
+    it('should start the quiz and display the first question', () => {
+      cy.mount(<Quiz />);
+      cy.get('button').contains('Start Quiz').click();
+      cy.get('.card').should('be.visible');
+      cy.get('h2').should('not.be.empty');
     });
-
-    it('displays the correct question', () => {
-        const question = 'What is the capital of France?';
-        mount(<Quiz question={question} />);
-        cy.get('[data-cy=question]').should('contain', question);
+    it('should answer questions and complete the quiz', () => {
+      cy.mount(<Quiz />);
+      cy.get('button').contains('Start Quiz').click();
+      cy.get('button').contains('1').click();
+      cy.get('.alert-success').should('be.visible').and('contain', 'Your score');
     });
-
-    it('handles answer selection', () => {
-        const answers = ['Paris', 'London', 'Berlin', 'Madrid'];
-        mount(<Quiz answers={answers} />);
-        cy.get('[data-cy=answer]').should('have.length', answers.length);
-        cy.get('[data-cy=answer]').first().click();
-        cy.get('[data-cy=answer]').first().should('have.class', 'selected');
+    it('should restart the quiz after completion', () => {
+      cy.mount(<Quiz />);
+      cy.get('button').contains('Start Quiz').click();
+      cy.get('button').contains('1').click();
+      cy.get('button').contains('Take New Quiz').click();
+      cy.get('.card').should('be.visible');
+      cy.get('h2').should('not.be.empty');
     });
 });

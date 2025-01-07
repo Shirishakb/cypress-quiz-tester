@@ -1,22 +1,40 @@
-describe('Tech Quiz E2E Test', () => {
-    it('should start and complete the quiz', () => {
+describe('Quiz Component', () => {
+    beforeEach(() => {
       cy.visit('/');
-      
-      // Start the quiz
-      cy.contains('Start Quiz').click();
-      cy.contains('Question').should('be.visible');
+    });
   
-      // Answer all questions
+    it('should start the quiz and display the first question', () => {
+      cy.get('button').contains('Start Quiz').click();
+      cy.get('.card').should('be.visible');
+      cy.get('h2').should('not.be.empty');
+    });
+  
+    it('should answer questions and complete the quiz', () => {
+      // Start the quiz
+      cy.get('button').contains('Start Quiz').click();
+  
+      // Answer questions (assuming all answers are the first button for simplicity)
       for (let i = 0; i < 10; i++) {
-        cy.get('button').contains('Next').click();
+        cy.get('button').contains('1').click();
       }
   
-      // Verify score and restart option
-      cy.contains('Your Score').should('be.visible');
-      cy.contains('Start Over').should('be.visible').click();
+      // Verify the quiz completion
+      cy.get('.alert-success').should('be.visible').and('contain', 'Your score');
+    });
   
-      // Verify restart
-      cy.contains('Start Quiz').should('be.visible');
+    it('should restart the quiz after completion', () => {
+      // Complete the quiz first
+      cy.get('button').contains('Start Quiz').click();
+      for (let i = 0; i < 10; i++) {
+        cy.get('button').contains('1').click();
+      }
+  
+      // Restart the quiz
+      cy.get('button').contains('Take New Quiz').click();
+  
+      // Verify the quiz is restarted
+      cy.get('.card').should('be.visible');
+      cy.get('h2').should('not.be.empty');
     });
   });
   
