@@ -1,30 +1,48 @@
 [
-    {
-      "id": 1,
-      "question": "What is JavaScript?",
-      "options": ["Language", "Framework", "Library", "Plugin"],
-      "correctAnswer": "Language"
-    },
-    {
-        "id": 2,
-        "question": "What is React?",
-        "options": ["Language", "Framework", "Library", "Plugin"],
-        "correctAnswer": "Library"
-    },
-    [
-      {
-        "id": 3,
-        "question": "What does HTML stand for?",
-        "options": ["Hyper Text Markup Language", "Hot Mail", "How to Make Lasagna"],
-        "correctAnswer": "Hyper Text Markup Language"
-      },
-      {
-        "id": 4,
-        "question": "What is CSS used for?",
-        "options": ["Styling", "Data Storage", "Server Communication"],
-        "correctAnswer": "Styling"
-      }
+  {
+    "question": "What is the capital of France?",
+    "answers": [
+      {"text": "Correct", "isCorrect": true},
+      {"text": "Almost", "isCorrect": false},
+      {"text": "Wrong", "isCorrect": false},
+      {"text": "Not even close", "isCorrect": false}
     ]
-    
-  ]
+  },
+  {
+    "question": "What is the capital of Germany?",
+    "answers": [
+      {"text": "Correct", "isCorrect": false},
+      {"text": "Almost", "isCorrect": false},
+      {"text": "Wrong", "isCorrect": false},
+      {"text": "Not even close", "isCorrect": true}
+    ]
+  },
+    {
+      "question": "What is the output of print(2 ** 3)?",
+      "answers": [
+        { "text": "6", "isCorrect": false },
+        { "text": "8", "isCorrect": true },
+        { "text": "9", "isCorrect": false },
+        { "text": "12", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Which of the following is a mutable data type in Python?",
+      "answers": [
+        { "text": "str", "isCorrect": false },
+        { "text": "tuple", "isCorrect": false },
+        { "text": "list", "isCorrect": true },
+        { "text": "int", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the keyword used to define a function in Python?",
+      "answers": [
+        { "text": "function", "isCorrect": false },
+        { "text": "func", "isCorrect": false },
+        { "text": "def", "isCorrect": true },
+        { "text": "define", "isCorrect": false }
+      ]
+    }
+]
   
