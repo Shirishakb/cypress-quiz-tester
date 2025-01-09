@@ -1,4 +1,4 @@
-# 19 Testing: Tech Quiz Test Suite
+# Cypress-Quiz-Testing
 
 ## Your Task
 
@@ -40,11 +40,9 @@ WHEN the quiz is over
 THEN I can start a new quiz
 ```
 
-## Mock-Up
+## Walkthrough-Video
 
-The following animation demonstrates the application functionality:
-
-![A GIF demonstrates a functioning quiz.](./Assets/19-testing-homework-demo.gif)
+https://www.loom.com/share/cf2aa12c3d884a36a680580d92a8c20e?sid=e4b30537-b9d1-4d98-9099-c8f2862065a5
 
 ## Getting Started
 
@@ -82,64 +80,3 @@ It's recommended that you start with a directory structure that looks like the f
 ```
 
 **Note**: The server for this application requires environment variables to function properly. You'll need to rename the `.env.example` file to `.env`.
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it's considered incomplete and won't count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Deliverables: 15%
-
-* Your GitHub repository must contain the application code as well as the configuration and tests using Cypress.
-
-### Walkthrough Video: 32%
-
-* A walkthrough video that demonstrates the component and end-to-end tests running and passing must be submitted.
-
-* The `README.md` file must include a link to the walkthrough video.
-
-* The walkthrough video must show all tests passing from the command line.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-### Technical Acceptance Criteria: 40%
-
-* Your submission should satisfy all of the preceding acceptance criteria in addition to the following:
-
-  * You must use the [Cypress package](https://www.npmjs.com/package/cypress).
-
-  * The application must have a component test for the quiz component.
-
-  * The application must have an end-to-end test for the quiz component.
-
-### Repository Quality: 13%
-
-* Your repository has a unique name.
-
-* Your repository follows the best practices for file structure and naming conventions.
-
-* Your repository follows the best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Your repository contains multiple descriptive commit messages.
-
-* Your repository contains a high-quality README with a description and a link to your walkthrough video.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* A walkthrough video that demonstrates the functionality of the application and the application successfully passing tests.
-
-* The URL of your GitHub repository, which should have a unique name and include a README describing the project.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
