@@ -4,7 +4,12 @@ import path from 'node:path';
 import db from './config/connection.js';
 import routes from './routes/index.js';
 
-await db();
+await db().then(() => {
+  console.log('Database connected successfully');
+}).catch((error) => {
+  console.error('Database connection failed:', error);
+  process.exit(1);  // Exit the process if the database connection fails
+});
 
 const PORT = process.env.PORT || 3001;
 const app = express();
