@@ -42,8 +42,7 @@ THEN I can start a new quiz
 
 ## Walkthrough-Video
 
-https://www.loom.com/share/cf2aa12c3d884a36a680580d92a8c20e?sid=e4b30537-b9d1-4d98-9099-c8f2862065a5
-
+https://www.loom.com/share/a0be8643c430443fad902e8559e47f9b?sid=2a3258b1-3821-44aa-a821-8b440ca4f1da
 ## Getting Started
 
 This Challenge combines many of the skills we've covered so far. In addition to the user story and acceptance criteria, we’ve provided some guidelines to help you get started.
